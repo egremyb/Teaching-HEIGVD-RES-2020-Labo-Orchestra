@@ -9,5 +9,8 @@
   },
   "keywords": [],
   "author": "Arthur Bécaud & Bruno Egremy",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "uuid": "^8.1.0"
+  }
 }
