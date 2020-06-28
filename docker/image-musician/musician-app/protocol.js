@@ -15,4 +15,7 @@ export const soundsToInstruments = new Map([
 ]);
 
 export const MUTLICAST_GROUP = "239.0.0.100";
-export const PORT            = 2506;
+export const TCP_PORT        = 2205;
+export const UDP_PORT        = 2206;
+
+export const ALIVE_TIME      = 5;

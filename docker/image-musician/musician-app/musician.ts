@@ -1,14 +1,13 @@
 import { v4 as uuidv4 } from 'uuid';
-import { Socket } from "dgram";
-import * as dgram from 'dgram';
-import * as protocol from './protocol.js';
+import * as dgram       from 'dgram';
+import * as protocol    from './protocol.js';
 
 export class Musician {
 
     instrument: string;
     uuid:       string;
     sound:      string;
-    socket:     Socket;
+    socket:     dgram.Socket;
 
     constructor(instrument: string) {
 

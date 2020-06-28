@@ -17,7 +17,7 @@ export class Musician {
             "uuid": this.uuid,
             "sound": this.sound
         }), 0, this.sound.length, port, ip);
-        console.log('This musician is making some noise : ' + this.sound + ' ♪ ♫');
+        console.log('This musician is making some noise : ' + this.sound + ' ♪ ♪ ♫');
     }
     concerto(port, ip, interval) {
         console.log('This beast of a musician is starting a concerto!');
