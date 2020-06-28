@@ -14,4 +14,5 @@ export const soundsToInstruments = new Map([
     ["drum", "boum-boum"]
 ]);
 
-export const SEPARATOR = ':';
+export const MUTLICAST_GROUP = "239.0.0.100";
+export const PORT            = 2506;

@@ -1,7 +1,7 @@
 import { v4 as uuidv4 } from 'uuid';
 import { Socket } from "dgram";
 import * as dgram from 'dgram';
-import * as protocol from './protocol.js'
+import * as protocol from './protocol.js';
 
 export class Musician {
 
@@ -25,8 +25,11 @@ export class Musician {
     }
 
     playSound(port: number, ip: string) {
-        this.socket.send(this.uuid + protocol.SEPARATOR + this.sound , 0, this.sound.length, port, ip);
-        console.log('This musician is making some noise : ' + this.sound + ' ♪ ♫')
+        this.socket.send(JSON.stringify({
+            "uuid"  : this.uuid,
+            "sound" : this.sound
+        }), 0, this.sound.length, port, ip);
+        console.log('This musician is making some noise : ' + this.sound + ' ♪ ♪ ♫');
     }
 
     concerto(port: number, ip: string, interval: number) {

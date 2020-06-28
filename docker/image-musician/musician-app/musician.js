@@ -13,7 +13,10 @@ export class Musician {
         console.log('A new musician playing ' + this.instrument + ' is born! uuid=\'' + this.uuid + '\'');
     }
     playSound(port, ip) {
-        this.socket.send(this.uuid + protocol.SEPARATOR + this.sound, 0, this.sound.length, port, ip);
+        this.socket.send(JSON.stringify({
+            "uuid": this.uuid,
+            "sound": this.sound
+        }), 0, this.sound.length, port, ip);
         console.log('This musician is making some noise : ' + this.sound + ' ♪ ♫');
     }
     concerto(port, ip, interval) {
